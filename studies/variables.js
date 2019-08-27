@@ -22,12 +22,12 @@ var myName;
 console.log(myName); // prints => undefined
 
 // 2. initialization or assignment //
-myName = 'john';
-console.log(myName); // prints => john
+myName = 'Edem';
+console.log(myName); // prints => Edem
 
 // 3. re-assignment //
-myName = 'bob';
-console.log(myName); // prints => bob
+myName = 'Akua';
+console.log(myName); // prints => Akua
 
 // NOTE: We can assign and re-assign anything to a variable - we cannot do this with constants //
 var myVariable = 1;
