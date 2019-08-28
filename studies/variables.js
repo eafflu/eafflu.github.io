@@ -213,19 +213,4 @@ console.log(shoes); // Prints <= flats
 // console.log(type); Triggers referenceError: type not defined
 // console.log(HEEL); Triggers referenceError: HEEL not defined
 
-function accessories(message, choice) {
-    
-   
-    var shoes = "Red shoes today girl" ;
-    
-    // type will only be available in this scope
-    let type = "sandals";
 
-    // HEEL will only be available in this scope
-    const HEEL = true;
-    return `${shoes} ${choice}`
-}
-
-console.log(shoes); // Prints <= Red shoes today girl
-// console.log(type); Triggers referenceError: type not defined
-// console.log(HEEL); Triggers referenceError: HEEL not defined
