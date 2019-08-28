@@ -1,8 +1,9 @@
 /*
  * String Manipulation:
  *
- * 0. Strings can be manipulated with operators and methods specific to strings. Strings can be accesed the same way we access values in arrays
- * using bracket notation. All strings have three properties .constructor, .length, .prototype
+ * 0. Strings can be manipulated with operators and methods specific to strings. 
+ * Strings can be accesed the same way we access values in arrays using bracket
+ * notation. All strings have three properties .constructor, .length, .prototype
  * 
  * 0a. Constructor Property: Returns the string's constructor property
  * 
@@ -10,9 +11,11 @@
  *
  * 0c. Prototype Property: Allows you to add properties and methods to an object
  *
- * 1. With Operators: using the addition operator we can combine two string data types to form a new combined string
+ * 1. With Operators: using the addition operator we can combine two string data
+ * types to form a new combined string
  *
- * 2. With methods: using pre determined methods in javascript, we can use string methods to manipulate any string
+ * 2. With methods: using pre determined methods in javascript, we can use 
+ * string methods to manipulate any string
  */
 
 let hungry = true;
@@ -20,12 +23,12 @@ let pizza = 'pizza';
 
 
 if (hungry) {
-
-    // We can use the addition operator to concatenate two strings to gether to form a sentence
+    
+// We can use the addition operator to concatenate two strings together 
     console.log("I'm Going To Get" + `${pizza}`); // Prints <= I'm Going To Get pizza
 }
 
-// String Interpolation: is a method that allows us to inject letiables directly into a string
+// String Interpolation: a method which lets us inject directly into a string
 console.log(`${hungry}${pizza}`); // Prints <= truepizza
 
 // Length Property
@@ -41,7 +44,7 @@ console.log(vacationSpot[0]); // <= prints i
 console.log(vacationSpot[vacationSpot.length - 1]); // <= prints d
 
 
-///////////////////////String Methods///////////////////////////////////////////////////////////////////////////////
+///////////////////////String Methods//////////////////////////////////////////
 
 // charAt(): returns the character at the specified index/position
 
@@ -85,7 +88,8 @@ if (true) {
     console.log(result); // <= prints true
 }
 
-// indexOf(): returns the position of the first found occurence of a specified value in a string
+// indexOf(): returns the position of the first found occurence of a specified
+ //value in a string
 
 if (true) {
     let str = "Hey Y'all";
@@ -93,7 +97,8 @@ if (true) {
     console.log(result); // <= prints 0
 }
 
-// lastIndexOf(): Returns the position of the last found occurence of a specified value in a string
+// lastIndexOf(): Returns the position of the last found occurence of a 
+ //specified value in a string
 
 if (true) {
     let str = "Hey Y'all";
@@ -101,7 +106,8 @@ if (true) {
     console.log(result); // <= prints 8
 }
 
-// match(): Searches a string for a match against a regular expression and returns the matches
+// match(): Searches a string for a match against a regular expression and
+ //returns the matches
 
 if (true) {
     let str = "Hey Y'all";
@@ -131,7 +137,8 @@ if (true) {
     console.log(result3); // <= prints 1
 }
 
-// repeat(): Returns a new string with a specified number of copies of an existing string
+// repeat(): Returns a new string with a specified number of copies of an 
+ //existing string
 
 if (true) {
     let str = "Hey Y'all";
@@ -141,7 +148,8 @@ if (true) {
 
 
 
-// replace(): Searches a string for a specified value of regular expression, returns the position of the match
+// replace(): Searches a string for a specified value of regular expression,
+ //returns the position of the match
 
 if (true) {
     let str = "Hey Y'all";
@@ -149,7 +157,8 @@ if (true) {
     console.log(result); // <= prints Hey Girl
 }
 
-// search(): Searcnes a string for a specified value or regular expression, and returns the postion of the match
+// search(): Searcnes a string for a specified value or regular expression, 
+ //and returns the postion of the match
 
 if (true) {
     let str = "Hey Y'all";
@@ -173,7 +182,8 @@ if (true) {
     console.log(result); // <= prints ['hey', "Y'all"] 
 }
 
-// startsWith(): Checks whether a string begins with specified characters, returns a boolean
+// startsWith(): Checks whether a string begins with specified characters, 
+ //returns a boolean
 
 if (true) {
     let str = "Hey Y'all";
@@ -181,7 +191,8 @@ if (true) {
     console.log(result); // <= prints true
 }
 
-// substring(): extracts the characters from a string betwween two specified characters
+// substring(): extracts the characters from a string betwween two specified 
+ //characters
 
 if (true) {
     let str = "Hey Y'all";
@@ -190,7 +201,8 @@ if (true) {
 }
 
 
-// substr(): Extracts the characters from a string, beginning at a specified start position, and through the specified number of character
+// substr(): Extracts the characters from a string, beginning at a specified 
+ //start position, and through the specified number of character
 
 if (true) {
     let str = "Hey Y'all";
@@ -198,7 +210,8 @@ if (true) {
     console.log(result); // <= prints ey Y
 }
 
-// toLocaleLowerCase(): Converts a string to lowercase letter based on he hosts locale
+// toLocaleLowerCase(): Converts a string to lowercase letter based on he hosts
+ //locale
 
 if (true) {
     let str = "hey y'all";
@@ -206,7 +219,8 @@ if (true) {
     console.log(result); // <= prints hey y'all
 }
 
-// toLocaleUpperCase():  Converts a string to lowercase letter based on he hosts locale
+// toLocaleUpperCase():  Converts a string to lowercase letter based on he hosts
+//locale
 
 if (true) {
     let str = "Hey Y'all";
