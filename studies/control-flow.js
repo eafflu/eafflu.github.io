@@ -131,4 +131,4 @@ switch (randomNumber) {
      
 }
 
-// open up the console and try it out!
+// open up the console copy & paste to and try it out!

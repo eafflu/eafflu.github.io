@@ -3,15 +3,18 @@
 //////////////////////////////////////////////////////////////////////
 
 function objectValues(object) {
-
-} 
+    // use method object.values to return an array of all the objects values return in the same line
+    return Object.values(object);
+}
 
 //////////////////////////////////////////////////////////////////////
 // Function 2 - Keys to String ///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
 function keysToString(object) {
-
+    // use method object.keys to create an array with all the objects keys
+    // use the join method to create an array of strings separtated by a space return in one line
+    return Object.keys(object).join(' ');
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -19,7 +22,22 @@ function keysToString(object) {
 //////////////////////////////////////////////////////////////////////
 
 function valuesToString(object) {
-    
+    // create a results array to hold final result
+    // use method object.values to create an array with all the objects values
+    let result = Object.values(object);
+
+    // loop through the array, use type of to make sure that every element in the array is a string
+    for (let i = 0; i < result.length; i++) {
+        
+     
+        if(typeof result[i] !== 'string'){
+    // remove any element that is not a string
+            result.splice(i, 1);
+        } 
+    }
+    // return result.join separated with a space
+    return result.join(' ');
+
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -27,7 +45,8 @@ function valuesToString(object) {
 //////////////////////////////////////////////////////////////////////
 
 function arrayOrObject(collection) {
-    
+    // check to see if collection is an array, if so return 'array', else return 'object' ternary
+return Array.isArray(collection) ? 'array': 'object';
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -35,7 +54,15 @@ function arrayOrObject(collection) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeWord(string) {
-    
+ // isolate and uppercase first character of the string
+ // use splice to isolate all the othercharacters in the string not including the first letter
+ // use string interpolation to return the joined string and return
+
+let stringCharUpper = string.charAt(0).toLocaleUpperCase();
+let remainingString = string.slice(1, string.length)
+
+return `${stringCharUpper}${remainingString}`;
+
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -43,7 +70,7 @@ function capitalizeWord(string) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeAllWords(string) {
-    
+
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -82,7 +109,7 @@ function hasWord(string, word) {
 // Function 11 - Add Friend //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-function addFriend (name, object) {
+function addFriend(name, object) {
 
 }
 
@@ -130,8 +157,8 @@ function dedup(array) {
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-if((typeof process !== 'undefined') &&
-   (typeof process.versions.node !== 'undefined')) {
+if ((typeof process !== 'undefined') &&
+    (typeof process.versions.node !== 'undefined')) {
     // here, export any references you need for tests //
     module.exports.objectValues = objectValues;
     module.exports.keysToString = keysToString;
