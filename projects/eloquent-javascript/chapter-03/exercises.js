@@ -2,23 +2,86 @@
 // min /////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function min() {
+function min(num1, num2) {
+  let result;
+  
+  if(num1 === num2){
+    result = 0;
+  } else if(num1 < 0 && num2 < 0){
+    if(num1 > num2){
+      result = num2;
+    }
+  } else if(num2 < num1){
+    result = num2
+    
+  } else{
+    if(num1 < num2){
+      result = num1
+    }
+  }
+  
+// compare num1 and num 2
 
+
+ // if num 1 is les than num 2 return num 1
+// return minumum if first argument is smaller
+// return minimum when second argument is smaller
+  // if num 2 is < num 1
+// return minimum if the ints are negative
+  // if num1 and num 2 are negative 
+    // return the one that is more negatiuve
+// return minimum when arguments are the same
+return result;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // isEven //////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function isEven() {
+function isEven(n) {
+// 0 is even base case
+// how can i get this function to hit the base case of either 1 or 0
+
+if(n === 0){
+  return true;
+}
+// 1 is odd base case
+if(n === 1){
+ return false
+}
+// this is the negative control flow
+ // else we can check the evenNess by saying n - 2 or if n % 2 === 0;
+if( n < 0 ){
+  Math.abs(n)
+  return n % 2 === 0 ? true : false
+}
+// if number is not 0, 1, or negative at call time
+else {
+  isEven(n - 1);
+ return n % 2 === 0 ? true : false
+}
 
 }
+  
 
 ////////////////////////////////////////////////////////////////////////////////
 // countChars //////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function countChars() {
+function countChars(string, target) {
+// base case 
+
+let occurences = 0;
+// when the counter  >= string.length
+
+  for(let i = 0; i < string.length; i++){
+
+    if(string[i] === target){
+      occurences ++
+    }
+  }
+
+return occurences
 
 }
 
@@ -26,8 +89,11 @@ function countChars() {
 // countBs /////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function countBs() {
-
+function countBs(string) {
+// checking for capital b's 
+// call count chars 
+// arguments(string, "B")
+return countChars(string, 'B');
 }
 
 ////////////////////////////////////////////////////////////////////////////////

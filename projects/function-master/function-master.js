@@ -22,14 +22,14 @@ function keysToString(object) {
 //////////////////////////////////////////////////////////////////////
 
 function valuesToString(object) {
-    // create a results array to hold final result
+  
     // use method object.values to create an array with all the objects values
     let result = Object.values(object);
 
-    // loop through the array, use type of to make sure that every element in the array is a string
+    // loop through the array, 
     for (let i = 0; i < result.length; i++) {
 
-
+//use type of to make sure that every element in the array is a string
         if (typeof result[i] !== 'string') {
             // remove any element that is not a string
             result.splice(i, 1);
@@ -202,12 +202,13 @@ function nonFriends(name, array) {
     let nonFriendsList = [];
     // loop
     for (let i = 0; i < array.length; i++) {
+        // create variable to hold the current objects name
         let currentName = array[i].name;
         let currentFriendsList = array[i].friends;
         // does the value of name match the current persons name property?
-        // if the curremtName does not match the name
+        // if the curremtName does not match the name, this means im not myself
         if (currentName !== name) {
-            //  no use includes method on friends property to see if name exists
+            //  use includes method on friends array to see if name exists
             if (!currentFriendsList.includes(name)) {
                 // if this name is not in the friends array push currentName into
                 //NFL
