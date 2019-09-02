@@ -2,7 +2,32 @@
 // range ///////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function range() {
+function range(start, end, step) {
+var result =[]
+  // base cas
+  // if both numds are the same return []
+  if(start === end){
+    return result;
+  }
+  // base case
+  // if there is a step
+  // if step is negative and the start < end return []
+  if(step){
+  if(step < 0 && start < end){
+    return result
+  } else{
+    for(let i = start; i <= end; i+=step){
+      result.push(i)
+    }
+  }
+  }
+  
+  else{
+    for(let i = start; i <= end; i++){
+      result.push(i)
+    }
+  }
+  return result;
 
 }
 
@@ -10,7 +35,19 @@ function range() {
 // sum /////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function sum() {
+function sum(array) {
+ 
+// base case 
+
+// when we have reached the index of the last element in the array
+
+return array.reduce(function(prev, current){
+  return prev + current;
+}, 0)
+// return the result
+
+
+// loop thru array add current element to the next element
 
 }
 
@@ -18,7 +55,9 @@ function sum() {
 // reverseArray ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function reverseArray() {
+function reverseArray(array) {
+  let result = array.slice(0);
+  return result.reverse()
 
 }
 
@@ -26,23 +65,30 @@ function reverseArray() {
 // reverseArrayInPlace /////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function reverseArrayInPlace() {
-
+function reverseArrayInPlace(array) {
+return array.reverse()
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // arrayToList /////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function arrayToList() {
-
+function arrayToList(array) {
+ let list = null;
+  for (let i = array.length - 1; i >= 0; i--) {
+    list = {value: array[i], rest: list};
+  }
+  return list;
 }
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // listToArray /////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function listToArray() {
+function listToArray(list) {
+  console.log(list);
+
 
 }
 
