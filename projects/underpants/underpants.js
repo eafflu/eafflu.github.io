@@ -519,6 +519,29 @@ _.some = function(collection, callback){
 *   _.extend(data, {a:"two"}); -> data now equals {a:"two"}
 */
 
+
+_.extend = function(obj1,...args){
+    let obj = obj1;
+    // loop through obj2
+      // set the key of the current object to be key on object1 
+      
+      for(let key in args){
+         // does the property on the current object exist in obj 1
+           for(let key2 in args[key]){
+               console.log(args[key][key2])
+               // update obj1 at key2 with 
+               console.log(obj1[key2])
+               obj1[key2] = args[key][key2];
+             
+           }
+      
+          
+      
+      }
+      
+    return obj;
+}
+
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
