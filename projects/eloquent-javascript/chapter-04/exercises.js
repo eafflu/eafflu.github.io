@@ -86,9 +86,25 @@ function arrayToList(array) {
 // listToArray /////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function listToArray(list) {
-  console.log(list);
+function listToArray(list, result = []) {
+ // console.log(list);
+// base case is when the value is null
 
+ // return result
+ for(var key in list){
+ //  console.log(list[key]);
+ if(typeof result[key] === 'object'){
+   
+ } else{
+   result.push(list[key])
+ }
+ }
+
+// recursive case
+// checks to see if the key is value and value is not null
+  // push into result
+  console.log(result)
+  return result;
 
 }
 
