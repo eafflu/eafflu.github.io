@@ -173,8 +173,6 @@ produces "object".
 
 function deepEqual(val1, val2) {
   
-
-
   
   // only want to do a comparison if both of the values are not null
   // and if both of the values do have types of objects
@@ -182,12 +180,10 @@ function deepEqual(val1, val2) {
   if(Array.isArray(val1) && Array.isArray(val2)){
       return val1.every(function(element, index){
     return deepEqual(val1[index], val2[index]);
-    
-  
+
      
      
    })
-    
     
   }
   else if(val1 !== null && typeof val1 === 'object' && val2 !== null && typeof val2 === 'object'){

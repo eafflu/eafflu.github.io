@@ -2,15 +2,38 @@
 // flatten /////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
 
-function flatten() {
-
+function flatten(arrays) {
+  // use reduce to loop through arrays
+  return arrays.reduce(function(previous, current){
+  // use for each to loop thru inner arrays
+  current.forEach(function(element){
+  // push each element into the array
+    previous.push(element)
+  })
+    
+  // set the seed to an array
+return previous
+  }, [])
+  // return accumulator
 }
 
 // /////////////////////////////////////////////////////////////////////////////
 // loop ////////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
 
-function loop() {
+/*
+Write a higher-order function loop that provides something like a for loop
+statement. It takes a value, a test function, an update function, and a body 
+function. Each iteration, it first runs the test function on the current loop 
+value and stops if that returns false. Then it calls the body function, giving
+it the current value. Finally, it calls the update function to create a new 
+value and starts from the beginning.
+*/
+
+function loop(value, test, update, body) {
+  for(let i = value; test(i); i = update(i)){
+    body(i);
+  }
 
 }
 
@@ -18,7 +41,14 @@ function loop() {
 // every ///////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
 
-function every() {
+function every(array, test) {
+let status = true;
+let something = array.some(function(element){
+  if(!test(element)){
+    status = false
+  }
+})
+return status;
 
 }
 
@@ -27,6 +57,7 @@ function every() {
 // /////////////////////////////////////////////////////////////////////////////
 
 function dominantDirection() {
+  // still need to do this
 
 }
 
